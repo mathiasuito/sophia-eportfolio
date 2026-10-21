@@ -1,0 +1,861 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sophia Paredes | ePortfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+    --burgundy: #76539A;
+    --dark-burgundy: #4B306A;
+    --rose: #B49ACF;
+    --blush: #E8DDF3;
+    --cream: #FAF7FF;
+    --lavender: #EDE5F7;
+    --text: #352C40;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.8;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 0 30px;
+    }
+
+    /* HEADER */
+
+    .top-banner {
+      background: var(--dark-burgundy);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    header {
+      background: #fffdfb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 90px;
+      gap: 25px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--burgundy);
+    }
+
+    .logo span {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+    }
+
+    nav a {
+      font-size: 12px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--rose);
+    }
+
+    /* HERO */
+
+    .hero {
+        background: linear-gradient(
+        120deg,
+        #FAF7FF,
+        #F0E8FA,
+        #DCCBEE
+    );
+    padding: 105px 0;
+    }
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--burgundy);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(52px, 6vw, 84px);
+      line-height: 1.15;
+      margin: 25px 0;
+    }
+
+    h1 em, h2 em {
+      color: var(--burgundy);
+      font-weight: 400;
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 540px;
+      color: #675961;
+    }
+
+    .hero-subtitle {
+      font-weight: 600;
+      color: var(--dark-burgundy) !important;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--burgundy);
+      color: white;
+      padding: 15px 30px;
+      margin-top: 25px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: var(--dark-burgundy);
+    }
+
+    .portrait {
+  height: 430px;
+  width: 100%;
+  padding: 0;
+  background: #E8DDF3;
+  border: 12px solid white;
+  box-shadow: 22px 22px 0 #DCCBEE;
+  overflow: hidden;
+}
+
+.portrait-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+    /* SECTIONS */
+
+    section.content-section {
+      padding: 105px 0;
+    }
+
+    h2 {
+      font-size: clamp(38px, 4vw, 58px);
+      line-height: 1.2;
+      margin: 18px 0 25px;
+    }
+
+    .section-description {
+      color: #746870;
+      max-width: 650px;
+      margin-bottom: 45px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #fffdfb;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 90px;
+    }
+
+    .about-text p {
+      font-size: 15px;
+      color: #675e63;
+      margin-bottom: 22px;
+    }
+
+    .signature {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-style: italic;
+      color: var(--burgundy);
+      margin-top: 30px;
+    }
+
+    /* QUOTE */
+
+    .quote {
+      background: var(--burgundy);
+      color: white;
+      text-align: center;
+      padding: 70px 25px;
+    }
+
+    .quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(25px, 3vw, 38px);
+      font-style: italic;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* EXPERIENCES */
+
+    .experiences {
+      background: #faf2f2;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .experience-card {
+      background: white;
+      box-shadow: 0 12px 30px rgba(80,40,60,0.07);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-image {
+      height: 185px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+    }
+
+    .card-image span {
+      font-size: 50px;
+    }
+
+    .card-image strong {
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+
+    .leadership-color {
+      background: linear-gradient(130deg, #50336F, #9876BC);
+    }
+
+    .volunteer-color {
+        background: linear-gradient(130deg, #8A6DAE, #C8B1E1);
+    }
+
+    .research-color {
+    background: linear-gradient(130deg, #665184, #A18CC4);
+    }
+
+    .card-content {
+      padding: 30px;
+    }
+
+    .card-content h3 {
+      color: var(--burgundy);
+      font-size: 29px;
+      margin: 0 0 10px;
+    }
+
+    .card-content p {
+      color: #71666c;
+      font-size: 14px;
+    }
+
+    .card-details {
+      border-top: 1px solid #eadde1;
+      padding-top: 20px;
+      margin-top: 22px;
+    }
+
+    .card-details strong {
+      color: var(--burgundy);
+    }
+
+    /* PROFESSIONAL GROWTH */
+
+    .growth {
+      background: var(--lavender);
+      text-align: center;
+    }
+
+    .growth p {
+      max-width: 700px;
+      margin: auto;
+      color: #675d68;
+    }
+
+    /* DIGITAL STORY */
+
+    .story {
+      background: #fffdfb;
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .video-box {
+      background: linear-gradient(135deg,#e9d6de,#cbaab9);
+      min-height: 300px;
+      border: 12px solid #f8eff2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .play-icon {
+      background: var(--burgundy);
+      color: white;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+
+    /* DOCUMENTS */
+
+    .documents {
+      background: #f8edef;
+    }
+
+    .document-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .document-card {
+      background: white;
+      border-top: 5px solid var(--rose);
+      padding: 35px;
+      min-height: 235px;
+    }
+
+    .document-card h3 {
+      color: var(--burgundy);
+      font-size: 27px;
+    }
+
+    .document-card p {
+      font-size: 14px;
+      color: #71666c;
+    }
+
+    .document-card small {
+      color: var(--burgundy);
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark-burgundy);
+      color: white;
+      padding: 40px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    footer strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #e4ccd5;
+    }
+
+    footer a {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 800px) {
+      .hero-content,
+      .about-layout,
+      .story-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .experience-grid,
+      .document-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar {
+        flex-direction: column;
+        padding: 20px 0;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .portrait {
+        max-width: 430px;
+        width: 90%;
+        margin: auto;
+      }
+
+      section.content-section {
+        padding: 75px 0;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    .documents {
+    background: #F1EAF8;
+    }
+
+    .video-box {
+    background: linear-gradient(
+    135deg,
+    #E8DDF3,
+    #B49ACF
+  );
+    border-color: #F5F0FA;
+    }
+
+    .document-card {
+    border-top-color: #B49ACF;
+    }
+
+    .card-details {
+    border-top-color: #E4D8F0;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="top-banner">
+    UNIVERSITY OF CENTRAL FLORIDA ✦ HEALTH SCIENCES ePORTFOLIO
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">
+        Sophia <span>Paredes</span>
+      </a>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#story">Digital Story</a>
+        <a href="#documents">Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOMEPAGE -->
+
+    <section id="home" class="hero">
+      <div class="container hero-content">
+
+        <div>
+          <span class="eyebrow">WELCOME TO MY ePORTFOLIO</span>
+
+          <h1>
+            Hello, I'm<br>
+            <em>Sophia Paredes.</em>
+          </h1>
+
+          <p class="hero-subtitle">
+            Health Sciences Graduate | Aspiring Healthcare Professional
+          </p>
+
+          <p>
+            Welcome to my personal ePortfolio! Here, I share the
+            experiences, achievements, and meaningful connections
+            that have shaped my academic journey and my passion
+            for healthcare.
+          </p>
+
+          <a href="#about" class="button">
+            GET TO KNOW ME ↗
+          </a>
+        </div>
+
+        <div class="portrait">
+        <img
+            src="images/IMG_0627.jpeg"
+            alt="Portrait of Sophia Paredes"
+            class="portrait-image"
+        >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+
+    <section id="about" class="content-section about">
+      <div class="container about-layout">
+
+        <div>
+          <span class="eyebrow">A LITTLE ABOUT ME</span>
+
+          <h2>
+            Driven by curiosity.<br>
+            <em>Grounded in care.</em>
+          </h2>
+        </div>
+
+        <div class="about-text">
+
+          <p>
+            My name is Sophia Paredes, and I am a Health Sciences
+            graduate from the University of Central Florida.
+            My academic journey has strengthened my interest
+            in understanding health, science, and the importance
+            of compassionate patient care.
+          </p>
+
+          <p>
+            Throughout my education, I have had opportunities
+            to develop my leadership abilities, contribute to
+            my community, and explore my academic interests.
+            These experiences have helped shape my personal
+            and professional goals.
+          </p>
+
+          <p>
+            I created this ePortfolio to share my accomplishments,
+            reflect on my growth, and highlight the experiences
+            that continue to inspire my future in healthcare.
+          </p>
+
+          <div class="signature">Sophia Paredes ♡</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+
+    <section class="quote">
+      <p>
+        "Every experience is an opportunity to learn,
+        grow, and make a meaningful difference."
+      </p>
+    </section>
+
+    <!-- EXPERIENCES -->
+
+    <section id="experiences" class="content-section experiences">
+      <div class="container">
+
+        <span class="eyebrow">MY JOURNEY</span>
+
+        <h2>
+          Experiences that <em>shaped me.</em>
+        </h2>
+
+        <p class="section-description">
+          Explore the leadership roles, community involvement,
+          and academic experiences that have contributed
+          to my personal and professional development.
+        </p>
+
+        <div class="experience-grid">
+
+          <!-- LEADERSHIP -->
+
+          <article class="experience-card">
+
+            <div class="card-image leadership-color">
+              <span>✦</span>
+              <strong>LEADERSHIP</strong>
+            </div>
+
+            <div class="card-content">
+              <h3>Leadership</h3>
+
+              <p>
+                Leadership has taught me the importance of
+                communication, responsibility, and supporting
+                those around me.
+              </p>
+
+              <div class="card-details">
+                <strong>My Leadership Experiences</strong>
+
+                <p>
+                  Leadership positions, organizations,
+                  responsibilities, and reflections
+                  will be added here.
+                </p>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- VOLUNTEERING -->
+
+          <article class="experience-card">
+
+            <div class="card-image volunteer-color">
+              <span>♡</span>
+              <strong>VOLUNTEERING</strong>
+            </div>
+
+            <div class="card-content">
+              <h3>Volunteering</h3>
+
+              <p>
+                Giving back to my community has allowed
+                me to connect with others and understand
+                the value of service.
+              </p>
+
+              <div class="card-details">
+                <strong>Community Involvement</strong>
+
+                <p>
+                  Volunteer organizations, activities,
+                  service hours, and personal reflections
+                  will be added here.
+                </p>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- RESEARCH -->
+
+          <article class="experience-card">
+
+            <div class="card-image research-color">
+              <span>✳</span>
+              <strong>RESEARCH</strong>
+            </div>
+
+            <div class="card-content">
+              <h3>Research & Projects</h3>
+
+              <p>
+                My academic experiences have encouraged
+                me to ask questions, think critically,
+                and continuously expand my knowledge.
+              </p>
+
+              <div class="card-details">
+                <strong>Academic Work</strong>
+
+                <p>
+                  Research experiences, academic projects,
+                  presentations, and reflections
+                  will be added here.
+                </p>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL GROWTH -->
+
+    <section class="content-section growth">
+      <div class="container">
+
+        <span class="eyebrow">LOOKING TOWARD THE FUTURE</span>
+
+        <h2>
+          Learning with <em>purpose.</em>
+        </h2>
+
+        <p>
+          As I continue my professional journey,
+          I hope to use the knowledge, compassion,
+          and skills I have developed to positively
+          impact the lives of others through healthcare.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- DIGITAL STORY -->
+
+    <section id="story" class="content-section story">
+      <div class="container story-layout">
+
+        <div>
+          <span class="eyebrow">MY DIGITAL STORY</span>
+
+          <h2>
+            The journey <em>behind my goals.</em>
+          </h2>
+
+          <p>
+            My digital story highlights the people,
+            experiences, and personal values that
+            have inspired my interest in healthcare
+            and shaped the person I am today.
+          </p>
+        </div>
+
+        <div class="video-box">
+          <div class="play-icon">▶</div>
+          <h3>My Digital Story</h3>
+          <p>Video coming soon</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DOCUMENTS -->
+
+    <section id="documents" class="content-section documents">
+      <div class="container">
+
+        <span class="eyebrow">PROFESSIONAL DOCUMENTS</span>
+
+        <h2>
+          More about <em>my work.</em>
+        </h2>
+
+        <p class="section-description">
+          Explore my professional background,
+          academic achievements, and future aspirations.
+        </p>
+
+        <div class="document-grid">
+
+          <div class="document-card">
+            <h3>Resume</h3>
+            <p>
+              My education, professional experiences,
+              accomplishments, and skills.
+            </p>
+            <small>PDF COMING SOON</small>
+          </div>
+
+          <div class="document-card">
+            <h3>Personal Statement</h3>
+            <p>
+              My personal experiences, motivations,
+              and professional aspirations.
+            </p>
+            <small>PDF COMING SOON</small>
+          </div>
+
+          <div class="document-card">
+            <h3>LinkedIn</h3>
+            <p>
+              My professional profile, experiences,
+              and connections.
+            </p>
+            <small>PROFILE LINK COMING SOON</small>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container footer-content">
+
+      <div>
+        <strong>Sophia Paredes</strong>
+        <p>
+          Health Sciences | University of Central Florida
+        </p>
+      </div>
+
+      <a href="#home">BACK TO TOP ↑</a>
+
+    </div>
+  </footer>
+
+</body>
+</html>
