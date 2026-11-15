@@ -1,22 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sophia Paredes - Health Sciences ePortfolio">
   <title>Sophia Paredes | ePortfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-    --burgundy: #76539A;
-    --dark-burgundy: #4B306A;
-    --rose: #B49ACF;
-    --blush: #E8DDF3;
-    --cream: #FAF7FF;
-    --lavender: #EDE5F7;
-    --text: #352C40;
+      --plum: #4B306A;
+      --purple: #76539A;
+      --mauve: #B49ACF;
+      --lilac: #E8DDF3;
+      --lavender: #F1EAF8;
+      --cream: #FAF7FF;
+      --text: #352C40;
+      --muted: #6E6277;
+      --white: #FFFFFF;
     }
 
     * {
@@ -25,7 +27,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 110px;
     }
 
     body {
@@ -47,10 +49,44 @@
       padding: 0 30px;
     }
 
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: clamp(38px, 4vw, 58px);
+      line-height: 1.2;
+      margin: 18px 0 25px;
+    }
+
+    h2 em, h1 em {
+      color: var(--purple);
+      font-weight: 400;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--purple);
+      text-transform: uppercase;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+    section.content-section {
+      padding: 105px 0;
+    }
+
     /* HEADER */
 
     .top-banner {
-      background: var(--dark-burgundy);
+      background: var(--plum);
       color: white;
       text-align: center;
       padding: 10px;
@@ -59,11 +95,11 @@
     }
 
     header {
-      background: #fffdfb;
+      background: rgba(255,255,255,0.97);
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+      box-shadow: 0 3px 15px rgba(0,0,0,0.05);
     }
 
     .navbar {
@@ -77,18 +113,19 @@
     .logo {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
-      color: var(--burgundy);
+      color: var(--plum);
+      white-space: nowrap;
     }
 
     .logo span {
       font-style: italic;
-      color: var(--rose);
+      color: var(--purple);
     }
 
     nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 26px;
+      gap: 23px;
     }
 
     nav a {
@@ -98,37 +135,26 @@
     }
 
     nav a:hover {
-      color: var(--rose);
+      color: var(--purple);
     }
 
     /* HERO */
 
     .hero {
-        background: linear-gradient(
+      background: linear-gradient(
         120deg,
         #FAF7FF,
         #F0E8FA,
         #DCCBEE
-    );
-    padding: 105px 0;
+      );
+      padding: 105px 0;
     }
+
     .hero-content {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       align-items: center;
       gap: 80px;
-    }
-
-    .eyebrow {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      color: var(--burgundy);
-    }
-
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 500;
     }
 
     h1 {
@@ -137,77 +163,55 @@
       margin: 25px 0;
     }
 
-    h1 em, h2 em {
-      color: var(--burgundy);
-      font-weight: 400;
-    }
-
     .hero p {
       font-size: 17px;
       max-width: 540px;
-      color: #675961;
+      color: var(--muted);
     }
 
     .hero-subtitle {
       font-weight: 600;
-      color: var(--dark-burgundy) !important;
+      color: var(--plum) !important;
     }
 
     .button {
       display: inline-block;
-      background: var(--burgundy);
+      background: var(--purple);
       color: white;
       padding: 15px 30px;
       margin-top: 25px;
       font-size: 12px;
+      font-weight: 700;
       letter-spacing: 2px;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
 
     .button:hover {
-      background: var(--dark-burgundy);
+      background: var(--plum);
+      transform: translateY(-3px);
     }
 
     .portrait {
-  height: 430px;
-  width: 100%;
-  padding: 0;
-  background: #E8DDF3;
-  border: 12px solid white;
-  box-shadow: 22px 22px 0 #DCCBEE;
-  overflow: hidden;
-}
-
-.portrait-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-  display: block;
-}
-
-    /* SECTIONS */
-
-    section.content-section {
-      padding: 105px 0;
+      height: 430px;
+      width: 100%;
+      background: var(--lilac);
+      border: 12px solid white;
+      box-shadow: 22px 22px 0 #DCCBEE;
+      overflow: hidden;
     }
 
-    h2 {
-      font-size: clamp(38px, 4vw, 58px);
-      line-height: 1.2;
-      margin: 18px 0 25px;
-    }
-
-    .section-description {
-      color: #746870;
-      max-width: 650px;
-      margin-bottom: 45px;
+    .portrait-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
     }
 
     /* ABOUT */
 
     .about {
-      background: #fffdfb;
+      background: white;
     }
 
     .about-layout {
@@ -218,7 +222,7 @@
 
     .about-text p {
       font-size: 15px;
-      color: #675e63;
+      color: var(--muted);
       margin-bottom: 22px;
     }
 
@@ -226,14 +230,14 @@
       font-family: 'Playfair Display', serif;
       font-size: 30px;
       font-style: italic;
-      color: var(--burgundy);
+      color: var(--purple);
       margin-top: 30px;
     }
 
     /* QUOTE */
 
     .quote {
-      background: var(--burgundy);
+      background: var(--purple);
       color: white;
       text-align: center;
       padding: 70px 25px;
@@ -243,35 +247,37 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(25px, 3vw, 38px);
       font-style: italic;
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
     }
 
     /* EXPERIENCES */
 
     .experiences {
-      background: #faf2f2;
+      background: #F5F0FA;
     }
 
     .experience-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
     }
 
     .experience-card {
       background: white;
-      box-shadow: 0 12px 30px rgba(80,40,60,0.07);
+      border-radius: 15px;
+      box-shadow: 0 12px 30px rgba(75,48,106,0.08);
       overflow: hidden;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .experience-card:hover {
       transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(75,48,106,0.14);
     }
 
     .card-image {
-      height: 185px;
+      height: 160px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -280,7 +286,7 @@
     }
 
     .card-image span {
-      font-size: 50px;
+      font-size: 45px;
     }
 
     .card-image strong {
@@ -293,55 +299,145 @@
     }
 
     .volunteer-color {
-        background: linear-gradient(130deg, #8A6DAE, #C8B1E1);
+      background: linear-gradient(130deg, #8A6DAE, #C8B1E1);
     }
 
     .research-color {
-    background: linear-gradient(130deg, #665184, #A18CC4);
+      background: linear-gradient(130deg, #665184, #A18CC4);
+    }
+
+    .honors-color {
+      background: linear-gradient(130deg, #8361A6, #C2A4DE);
     }
 
     .card-content {
-      padding: 30px;
+      padding: 32px;
     }
 
     .card-content h3 {
-      color: var(--burgundy);
+      color: var(--plum);
       font-size: 29px;
       margin: 0 0 10px;
     }
 
     .card-content p {
-      color: #71666c;
+      color: var(--muted);
       font-size: 14px;
     }
 
     .card-details {
-      border-top: 1px solid #eadde1;
+      border-top: 1px solid #E4D8F0;
       padding-top: 20px;
       margin-top: 22px;
     }
 
-    .card-details strong {
-      color: var(--burgundy);
+    .card-details h4 {
+      color: var(--purple);
+      font-size: 14px;
+      margin: 20px 0 8px;
     }
 
-    /* PROFESSIONAL GROWTH */
+    .card-details ul {
+      padding-left: 20px;
+      margin: 8px 0 18px;
+    }
+
+    .card-details li {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .card-details li strong {
+      color: var(--plum);
+    }
+
+    .reflection {
+      margin-top: 24px;
+      padding: 18px 20px;
+      background: #F6F1FA;
+      border-left: 4px solid var(--mauve);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .reflection strong {
+      font-size: 13px;
+      color: var(--plum);
+    }
+
+    .reflection p {
+      margin: 8px 0 0;
+      font-size: 13px;
+    }
+
+    .text-link {
+      color: var(--purple);
+      font-weight: 700;
+      font-size: 13px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    /* PROFESSIONAL EXPERIENCE */
+
+    .professional {
+      background: white;
+    }
+
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .career-card {
+      padding: 30px;
+      border-radius: 14px;
+      background: var(--cream);
+      border: 1px solid #E7DCF0;
+    }
+
+    .career-card h3 {
+      font-size: 24px;
+      color: var(--plum);
+      margin: 0 0 8px;
+    }
+
+    .career-card .career-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--purple);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .career-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* GROWTH */
 
     .growth {
-      background: var(--lavender);
+      background: var(--lilac);
       text-align: center;
     }
 
     .growth p {
-      max-width: 700px;
+      max-width: 740px;
       margin: auto;
-      color: #675d68;
+      color: var(--muted);
     }
 
     /* DIGITAL STORY */
 
     .story {
-      background: #fffdfb;
+      background: white;
     }
 
     .story-layout {
@@ -351,10 +447,14 @@
       gap: 70px;
     }
 
+    .story-layout p {
+      color: var(--muted);
+    }
+
     .video-box {
-      background: linear-gradient(135deg,#e9d6de,#cbaab9);
+      background: linear-gradient(135deg, #E8DDF3, #B49ACF);
       min-height: 300px;
-      border: 12px solid #f8eff2;
+      border: 12px solid #F5F0FA;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -363,7 +463,7 @@
     }
 
     .play-icon {
-      background: var(--burgundy);
+      background: var(--purple);
       color: white;
       border-radius: 50%;
       width: 70px;
@@ -374,10 +474,70 @@
       font-size: 25px;
     }
 
+    .video-box h3 {
+      color: var(--plum);
+      font-size: 26px;
+      margin: 0;
+    }
+
+    /* DOCUMENTS */
+
+    .documents {
+      background: var(--lavender);
+    }
+
+    .document-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .document-card {
+      display: block;
+      padding: 35px;
+      background: white;
+      border-radius: 18px;
+      border: 1px solid #E8DDF3;
+      border-top: 5px solid var(--purple);
+      color: var(--text);
+      box-shadow: 0 8px 25px rgba(75,48,106,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .document-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(75,48,106,0.16);
+    }
+
+    .document-card h3 {
+      color: var(--plum);
+      margin: 15px 0;
+      font-size: 25px;
+    }
+
+    .document-card p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .document-icon {
+      font-size: 32px;
+      color: var(--purple);
+    }
+
+    .document-link {
+      display: inline-block;
+      margin-top: 18px;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--purple);
+    }
+
     /* FOOTER */
 
     footer {
-      background: var(--dark-burgundy);
+      background: var(--plum);
       color: white;
       padding: 40px 0;
     }
@@ -396,7 +556,7 @@
 
     footer p {
       font-size: 12px;
-      color: #e4ccd5;
+      color: #E8DDF3;
     }
 
     footer a {
@@ -404,21 +564,31 @@
       font-weight: 700;
     }
 
-    /* MOBILE */
+    /* RESPONSIVE */
 
-    @media(max-width: 800px) {
+    @media (max-width: 900px) {
       .hero-content,
       .about-layout,
       .story-layout {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 45px;
       }
 
-      .experience-grid,
       .document-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
+      .hero {
+        padding: 75px 0;
+      }
+
+      .portrait {
+        max-width: 430px;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 650px) {
       .navbar {
         flex-direction: column;
         padding: 20px 0;
@@ -426,106 +596,53 @@
 
       nav {
         justify-content: center;
-        gap: 15px;
+        gap: 12px 18px;
       }
 
-      .hero {
-        padding: 70px 0;
+      nav a {
+        font-size: 11px;
       }
 
-      .portrait {
-        max-width: 430px;
-        width: 90%;
-        margin: auto;
+      .experience-grid,
+      .career-grid,
+      .document-grid {
+        grid-template-columns: 1fr;
       }
 
       section.content-section {
-        padding: 75px 0;
+        padding: 70px 0;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .portrait {
+        width: 90%;
+        height: 380px;
       }
 
       .footer-content {
         flex-direction: column;
         text-align: center;
       }
+
+      .top-banner {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
     }
-    .documents {
-    background: #F1EAF8;
-    }
-
-    .video-box {
-    background: linear-gradient(
-    135deg,
-    #E8DDF3,
-    #B49ACF
-  );
-    border-color: #F5F0FA;
-    }
-
-    .document-card {
-    border-top-color: #B49ACF;
-    }
-
-    .card-details {
-    border-top-color: #E4D8F0;
-    }
-
-    .document-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.document-card {
-  display: block;
-  padding: 35px;
-  background: #ffffff;
-  border-radius: 18px;
-  border: 1px solid #e8ddf3;
-  border-top: 5px solid #76539a;
-  text-decoration: none;
-  color: #352c40;
-  box-shadow: 0 8px 25px rgba(75, 48, 106, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.document-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(75, 48, 106, 0.16);
-}
-
-.document-card h3 {
-  color: #4b306a;
-  margin: 15px 0;
-}
-
-.document-icon {
-  font-size: 32px;
-  color: #76539a;
-}
-
-.document-link {
-  display: inline-block;
-  margin-top: 18px;
-  font-weight: 700;
-  color: #76539a;
-}
-
-@media (max-width: 700px) {
-  .document-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
   </style>
 </head>
 
 <body>
 
+  <!-- TOP BANNER -->
   <div class="top-banner">
     UNIVERSITY OF CENTRAL FLORIDA ✦ HEALTH SCIENCES ePORTFOLIO
   </div>
 
+  <!-- NAVIGATION -->
   <header>
     <div class="container navbar">
       <a href="#home" class="logo">
@@ -536,6 +653,7 @@
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
         <a href="#experiences">Experiences</a>
+        <a href="#professional">Career</a>
         <a href="#story">Digital Story</a>
         <a href="#documents">Documents</a>
       </nav>
@@ -544,8 +662,7 @@
 
   <main>
 
-    <!-- HOMEPAGE -->
-
+    <!-- HERO -->
     <section id="home" class="hero">
       <div class="container hero-content">
 
@@ -558,14 +675,15 @@
           </h1>
 
           <p class="hero-subtitle">
-            Health Sciences Graduate | Aspiring Healthcare Professional
+            UCF Health Sciences | Pre-Clinical Track |
+            Aspiring Physician Assistant
           </p>
 
           <p>
-            Welcome to my personal ePortfolio! Here, I share the
-            experiences, achievements, and meaningful connections
-            that have shaped my academic journey and my passion
-            for healthcare.
+            Welcome to my personal ePortfolio!
+            Here, I share the experiences, achievements,
+            and meaningful connections that have shaped
+            my academic journey and passion for healthcare.
           </p>
 
           <a href="#about" class="button">
@@ -574,18 +692,17 @@
         </div>
 
         <div class="portrait">
-        <img
+          <img
             src="images/IMG_0627.jpeg"
             alt="Portrait of Sophia Paredes"
             class="portrait-image"
-        >
+          >
         </div>
 
       </div>
     </section>
 
     <!-- ABOUT ME -->
-
     <section id="about" class="content-section about">
       <div class="container about-layout">
 
@@ -601,25 +718,41 @@
         <div class="about-text">
 
           <p>
-            My name is Sophia Paredes, and I am a Health Sciences
-            graduate from the University of Central Florida.
-            My academic journey has strengthened my interest
-            in understanding health, science, and the importance
-            of compassionate patient care.
+            My name is Sophia Paredes, and I am a
+            Health Sciences student in the pre-clinical
+            track at the University of Central Florida,
+            graduating in December 2026.
           </p>
 
           <p>
-            Throughout my education, I have had opportunities
-            to develop my leadership abilities, contribute to
-            my community, and explore my academic interests.
-            These experiences have helped shape my personal
-            and professional goals.
+            My interest in medicine has grown through
+            personal experiences, academic exploration,
+            and my time working as a medical scribe
+            in the emergency department.
           </p>
 
           <p>
-            I created this ePortfolio to share my accomplishments,
-            reflect on my growth, and highlight the experiences
-            that continue to inspire my future in healthcare.
+            Working alongside physicians and physician
+            assistants allowed me to observe the
+            importance of clinical knowledge, teamwork,
+            and compassionate patient care.
+          </p>
+
+          <p>
+            As someone who speaks both English and Spanish,
+            I value the opportunity to connect with
+            patients through shared language and culture.
+            My goal is to become a physician assistant
+            who helps patients feel heard, understood,
+            and respected.
+          </p>
+
+          <p>
+            Beyond healthcare, my involvement in
+            leadership, community service, and
+            professional experiences has strengthened
+            my communication skills, responsibility,
+            and commitment to helping others.
           </p>
 
           <div class="signature">Sophia Paredes ♡</div>
@@ -629,7 +762,6 @@
     </section>
 
     <!-- QUOTE -->
-
     <section class="quote">
       <p>
         "Every experience is an opportunity to learn,
@@ -638,7 +770,6 @@
     </section>
 
     <!-- EXPERIENCES -->
-
     <section id="experiences" class="content-section experiences">
       <div class="container">
 
@@ -649,15 +780,16 @@
         </h2>
 
         <p class="section-description">
-          Explore the leadership roles, community involvement,
-          and academic experiences that have contributed
-          to my personal and professional development.
+          From leadership and community service to
+          research and academic achievements, these
+          experiences have helped me develop the skills,
+          values, and perspective I hope to carry into
+          my future healthcare career.
         </p>
 
         <div class="experience-grid">
 
-          <!-- LEADERSHIP -->
-
+          <!-- LEADERSHIP CARD -->
           <article class="experience-card">
 
             <div class="card-image leadership-color">
@@ -669,26 +801,59 @@
               <h3>Leadership</h3>
 
               <p>
-                Leadership has taught me the importance of
-                communication, responsibility, and supporting
-                those around me.
+                Leadership has taught me the importance
+                of communication, accountability,
+                organization, and supporting others
+                toward shared goals.
               </p>
 
               <div class="card-details">
-                <strong>My Leadership Experiences</strong>
+                <h4>Lambda Theta Alpha Latin Sorority, Inc.</h4>
 
-                <p>
-                  Leadership positions, organizations,
-                  responsibilities, and reflections
-                  will be added here.
-                </p>
+                <ul>
+                  <li>
+                    <strong>Beta Theta Chapter Vice President</strong><br>
+                    August 2024 – May 2025
+                  </li>
+
+                  <li>
+                    <strong>Beta Theta Chapter Orientation Advisor</strong><br>
+                    January 2026 – December 2026
+                  </li>
+
+                  <li>
+                    <strong>Homecoming Committee Lead</strong><br>
+                    2024 and 2025
+                  </li>
+                </ul>
+
+                <h4>Engineers Without Borders</h4>
+
+                <ul>
+                  <li>
+                    <strong>Founding Member & Public Relations Chair</strong><br>
+                    January 2024 – August 2024
+                  </li>
+                </ul>
+
+                <div class="reflection">
+                  <strong>Personal Reflection</strong>
+                  <p>
+                    These leadership experiences have
+                    strengthened my ability to work with
+                    different personalities, communicate
+                    effectively, and take responsibility
+                    for the success of a team. They have
+                    also shown me how important it is
+                    to create an environment where
+                    everyone feels supported.
+                  </p>
+                </div>
               </div>
             </div>
-
           </article>
 
-          <!-- VOLUNTEERING -->
-
+          <!-- VOLUNTEERING CARD -->
           <article class="experience-card">
 
             <div class="card-image volunteer-color">
@@ -700,31 +865,69 @@
               <h3>Volunteering</h3>
 
               <p>
-                Giving back to my community has allowed
-                me to connect with others and understand
-                the value of service.
+                Community service has given me
+                opportunities to contribute to causes
+                that support individuals, families,
+                and the environment.
               </p>
 
               <div class="card-details">
-                <strong>Community Involvement</strong>
+                <h4>Community Organizations</h4>
 
-                <p>
-                  Volunteer organizations, activities,
-                  service hours, and personal reflections
-                  will be added here.
-                </p>
+                <ul>
+                  <li>
+                    <strong>Clean the World Foundation</strong><br>
+                    Community service organization
+                    focused on hygiene and global health.
+                  </li>
+
+                  <li>
+                    <strong>Second Harvest Food Bank</strong><br>
+                    Organization addressing food insecurity
+                    and hunger in the community.
+                  </li>
+
+                  <li>
+                    <strong>United Against Poverty</strong><br>
+                    Organization supporting individuals
+                    and families experiencing poverty.
+                  </li>
+
+                  <li>
+                    <strong>Daytona Beach Cleanups</strong><br>
+                    Environmental and community
+                    cleanup activities.
+                  </li>
+
+                  <li>
+                    <strong>Project Linus</strong><br>
+                    Organization providing handmade
+                    blankets to children in need.
+                  </li>
+                </ul>
+
+                <div class="reflection">
+                  <strong>Personal Reflection</strong>
+                  <p>
+                    Volunteering has helped me recognize
+                    the different challenges people face
+                    beyond healthcare settings. It has
+                    encouraged me to approach others
+                    with empathy, appreciate the value
+                    of service, and understand how small
+                    acts of kindness can make a difference.
+                  </p>
+                </div>
               </div>
             </div>
-
           </article>
 
-          <!-- RESEARCH -->
-
+          <!-- RESEARCH CARD -->
           <article class="experience-card">
 
             <div class="card-image research-color">
               <span>✳</span>
-              <strong>RESEARCH</strong>
+              <strong>RESEARCH & PROJECTS</strong>
             </div>
 
             <div class="card-content">
@@ -732,21 +935,215 @@
 
               <p>
                 My academic experiences have encouraged
-                me to ask questions, think critically,
-                and continuously expand my knowledge.
+                me to ask questions, evaluate evidence,
+                and explore important topics in
+                health sciences.
               </p>
 
               <div class="card-details">
-                <strong>Academic Work</strong>
+                <h4>UCF Health Research Symposium</h4>
 
                 <p>
-                  Research experiences, academic projects,
-                  presentations, and reflections
-                  will be added here.
+                  Fall 2026
                 </p>
+
+                <p>
+                  Participation in a university
+                  research-focused academic event
+                  highlighting health-related topics
+                  and scholarly exploration.
+                </p>
+
+                <h4>HSC 4730 Research Proposal</h4>
+
+                <p>
+                  A collaborative academic research
+                  proposal exploring the relationship
+                  between bipolar disorder and
+                  abortion-seeking behavior.
+                </p>
+
+                <a
+                  href="documents/research-proposal.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-link"
+                >
+                  View Research Proposal ↗
+                </a>
+
+                <div class="reflection">
+                  <strong>Personal Reflection</strong>
+                  <p>
+                    Research has helped me appreciate
+                    the importance of asking meaningful
+                    questions and using evidence to
+                    better understand complex health
+                    issues. These experiences have
+                    encouraged me to continue learning
+                    and approaching healthcare with
+                    curiosity and critical thinking.
+                  </p>
+                </div>
               </div>
             </div>
+          </article>
 
+          <!-- HONORS CARD -->
+          <article class="experience-card">
+
+            <div class="card-image honors-color">
+              <span>★</span>
+              <strong>HONORS & CERTIFICATIONS</strong>
+            </div>
+
+            <div class="card-content">
+              <h3>Honors & Achievements</h3>
+
+              <p>
+                My academic accomplishments,
+                certifications, and scholarships
+                reflect my dedication to education,
+                professional growth, and perseverance.
+              </p>
+
+              <div class="card-details">
+
+                <h4>Academic Honors</h4>
+
+                <ul>
+                  <li>
+                    <strong>Dean's List</strong><br>
+                    Spring 2024
+                  </li>
+
+                  <li>
+                    <strong>President's List</strong><br>
+                    Spring 2026
+                  </li>
+                </ul>
+
+                <h4>Scholarships</h4>
+
+                <ul>
+                  <li>
+                    <strong>Hug Life Scholarship</strong><br>
+                    Dr. Phillips High School
+                  </li>
+
+                  <li>
+                    <strong>Florida Bright Futures</strong><br>
+                    Medallion Scholar
+                  </li>
+                </ul>
+
+                <h4>Professional Certifications</h4>
+
+                <ul>
+                  <li>
+                    <strong>Phlebotomy Certification</strong><br>
+                    Clinical Solutions
+                  </li>
+                </ul>
+
+                <div class="reflection">
+                  <strong>Personal Reflection</strong>
+                  <p>
+                    These achievements represent
+                    my commitment to maintaining
+                    academic excellence while continuing
+                    to grow personally and professionally.
+                    They remind me of the importance
+                    of perseverance, discipline,
+                    and setting meaningful goals.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section id="professional" class="content-section professional">
+      <div class="container">
+
+        <span class="eyebrow">PROFESSIONAL DEVELOPMENT</span>
+
+        <h2>
+          Learning through <em>experience.</em>
+        </h2>
+
+        <p class="section-description">
+          My professional experiences in healthcare,
+          hospitality, and customer service have helped
+          me develop communication, adaptability,
+          teamwork, and attention to detail.
+        </p>
+
+        <div class="career-grid">
+
+          <article class="career-card">
+            <span class="career-tag">Healthcare Experience</span>
+            <h3>Medical Scribe</h3>
+            <p>
+              <strong>ScribeAmerica | AdventHealth East Orlando</strong><br>
+              April 2025 – June 2026
+            </p>
+            <p>
+              Documented patient encounters in the
+              emergency department, supported clinical
+              workflows, and observed physicians and
+              physician assistants providing patient care.
+            </p>
+          </article>
+
+          <article class="career-card">
+            <span class="career-tag">Hospitality Experience</span>
+            <h3>Server</h3>
+            <p>
+              <strong>Libra | Hotel Beauden</strong><br>
+              October 2024 – Present
+            </p>
+            <p>
+              Provide personalized guest experiences,
+              collaborate with team members, and
+              manage multiple responsibilities in
+              a fast-paced dining environment.
+            </p>
+          </article>
+
+          <article class="career-card">
+            <span class="career-tag">Hospitality Experience</span>
+            <h3>Server & Delivery Specialist</h3>
+            <p>
+              <strong>Olive Garden</strong><br>
+              June 2023 – January 2025
+            </p>
+            <p>
+              Developed customer service,
+              communication, organization,
+              and multitasking skills while
+              assisting guests and coordinating orders.
+            </p>
+          </article>
+
+          <article class="career-card">
+            <span class="career-tag">Additional Experience</span>
+            <h3>Other Professional Roles</h3>
+            <p>
+              My previous work experiences also include:
+            </p>
+            <p>
+              Line Server & Expo at Fresh Kitchen,
+              Barista at Scooter's Coffee,
+              Parade Escort at Universal Orlando Resort,
+              and Photography Assistant at
+              Caromont Photography LLC.
+            </p>
           </article>
 
         </div>
@@ -754,7 +1151,6 @@
     </section>
 
     <!-- PROFESSIONAL GROWTH -->
-
     <section class="content-section growth">
       <div class="container">
 
@@ -765,17 +1161,19 @@
         </h2>
 
         <p>
-          As I continue my professional journey,
-          I hope to use the knowledge, compassion,
-          and skills I have developed to positively
-          impact the lives of others through healthcare.
+          My goal is to become a physician assistant
+          who combines clinical knowledge with
+          compassionate, patient-centered care.
+          I hope to use my experiences, bilingual
+          communication skills, and passion for
+          helping others to create meaningful
+          connections with patients and their families.
         </p>
 
       </div>
     </section>
 
     <!-- DIGITAL STORY -->
-
     <section id="story" class="content-section story">
       <div class="container story-layout">
 
@@ -789,8 +1187,15 @@
           <p>
             My digital story highlights the people,
             experiences, and personal values that
-            have inspired my interest in healthcare
-            and shaped the person I am today.
+            inspired my interest in medicine.
+          </p>
+
+          <p>
+            From my family and upbringing to my
+            experiences in the emergency department,
+            each chapter of my journey has contributed
+            to the healthcare professional I aspire
+            to become.
           </p>
         </div>
 
@@ -804,75 +1209,93 @@
     </section>
 
     <!-- DOCUMENTS -->
-<section id="documents" class="content-section documents">
-  <div class="container">
+    <section id="documents" class="content-section documents">
+      <div class="container">
 
-    <span class="eyebrow">EXPLORE MY WORK</span>
-    <h2>Documents & <em>Achievements.</em></h2>
+        <span class="eyebrow">EXPLORE MY WORK</span>
 
-    <p class="section-description">
-      Explore my academic work, professional background,
-      and personal accomplishments.
-    </p>
+        <h2>
+          Documents & <em>Academic Work.</em>
+        </h2>
 
-    <div class="document-grid">
-
-      <a class="document-card"
-         href="documents/resume.pdf"
-         target="_blank" rel="noopener noreferrer">
-        <span class="document-icon">✦</span>
-        <h3>My Resume</h3>
-        <p>
-          My education, clinical experience,
-          leadership roles, and professional skills.
+        <p class="section-description">
+          Explore my professional background,
+          personal motivations, and academic research.
         </p>
-        <span class="document-link">View Resume ↗</span>
-      </a>
 
-      <a class="document-card"
-         href="documents/personal-statement.pdf"
-         target="_blank" rel="noopener noreferrer">
-        <span class="document-icon">♡</span>
-        <h3>Personal Statement</h3>
-        <p>
-          My experiences, motivations, and aspirations
-          toward becoming a physician assistant.
-        </p>
-        <span class="document-link">Read My Story ↗</span>
-      </a>
+        <div class="document-grid">
 
-      <a class="document-card"
-         href="documents/research-proposal.pdf"
-         target="_blank" rel="noopener noreferrer">
-        <span class="document-icon">✧</span>
-        <h3>Research Proposal</h3>
-        <p>
-          A collaborative research proposal exploring
-          bipolar disorder and reproductive healthcare.
-        </p>
-        <span class="document-link">View Research ↗</span>
-      </a>
+          <!-- RESUME -->
+          <a
+            class="document-card"
+            href="documents/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="document-icon">✦</span>
+            <h3>My Resume</h3>
 
-      <a class="document-card"
-         href="documents/accomplishments.pdf"
-         target="_blank" rel="noopener noreferrer">
-        <span class="document-icon">★</span>
-        <h3>Accomplishments</h3>
-        <p>
-          My academic honors, certifications,
-          scholarships, and community involvement.
-        </p>
-        <span class="document-link">View Accomplishments ↗</span>
-      </a>
+            <p>
+              Explore my education, clinical
+              experience, leadership roles,
+              certifications, and professional skills.
+            </p>
 
-    </div>
-  </div>
-</section>
+            <span class="document-link">
+              View Resume ↗
+            </span>
+          </a>
+
+          <!-- PERSONAL STATEMENT -->
+          <a
+            class="document-card"
+            href="documents/personal-statement.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="document-icon">♡</span>
+            <h3>Personal Statement</h3>
+
+            <p>
+              Discover the experiences and
+              values that inspired my journey
+              toward becoming a physician assistant.
+            </p>
+
+            <span class="document-link">
+              Read My Story ↗
+            </span>
+          </a>
+
+          <!-- RESEARCH PROPOSAL -->
+          <a
+            class="document-card"
+            href="documents/research-proposal.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="document-icon">✧</span>
+            <h3>Research Proposal</h3>
+
+            <p>
+              A collaborative academic proposal
+              exploring bipolar disorder,
+              reproductive healthcare,
+              and abortion-seeking behavior.
+            </p>
+
+            <span class="document-link">
+              View Research ↗
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <!-- FOOTER -->
-
   <footer>
     <div class="container footer-content">
 
