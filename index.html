@@ -374,40 +374,6 @@
       font-size: 25px;
     }
 
-    /* DOCUMENTS */
-
-    .documents {
-      background: #f8edef;
-    }
-
-    .document-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .document-card {
-      background: white;
-      border-top: 5px solid var(--rose);
-      padding: 35px;
-      min-height: 235px;
-    }
-
-    .document-card h3 {
-      color: var(--burgundy);
-      font-size: 27px;
-    }
-
-    .document-card p {
-      font-size: 14px;
-      color: #71666c;
-    }
-
-    .document-card small {
-      color: var(--burgundy);
-      font-weight: 700;
-    }
-
     /* FOOTER */
 
     footer {
@@ -502,6 +468,54 @@
     .card-details {
     border-top-color: #E4D8F0;
     }
+
+    .document-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.document-card {
+  display: block;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e8ddf3;
+  border-top: 5px solid #76539a;
+  text-decoration: none;
+  color: #352c40;
+  box-shadow: 0 8px 25px rgba(75, 48, 106, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.document-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(75, 48, 106, 0.16);
+}
+
+.document-card h3 {
+  color: #4b306a;
+  margin: 15px 0;
+}
+
+.document-icon {
+  font-size: 32px;
+  color: #76539a;
+}
+
+.document-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-weight: 700;
+  color: #76539a;
+}
+
+@media (max-width: 700px) {
+  .document-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
   </style>
 </head>
@@ -790,53 +804,70 @@
     </section>
 
     <!-- DOCUMENTS -->
+<section id="documents" class="content-section documents">
+  <div class="container">
 
-    <section id="documents" class="content-section documents">
-      <div class="container">
+    <span class="eyebrow">EXPLORE MY WORK</span>
+    <h2>Documents & <em>Achievements.</em></h2>
 
-        <span class="eyebrow">PROFESSIONAL DOCUMENTS</span>
+    <p class="section-description">
+      Explore my academic work, professional background,
+      and personal accomplishments.
+    </p>
 
-        <h2>
-          More about <em>my work.</em>
-        </h2>
+    <div class="document-grid">
 
-        <p class="section-description">
-          Explore my professional background,
-          academic achievements, and future aspirations.
+      <a class="document-card"
+         href="documents/resume.pdf"
+         target="_blank" rel="noopener noreferrer">
+        <span class="document-icon">✦</span>
+        <h3>My Resume</h3>
+        <p>
+          My education, clinical experience,
+          leadership roles, and professional skills.
         </p>
+        <span class="document-link">View Resume ↗</span>
+      </a>
 
-        <div class="document-grid">
+      <a class="document-card"
+         href="documents/personal-statement.pdf"
+         target="_blank" rel="noopener noreferrer">
+        <span class="document-icon">♡</span>
+        <h3>Personal Statement</h3>
+        <p>
+          My experiences, motivations, and aspirations
+          toward becoming a physician assistant.
+        </p>
+        <span class="document-link">Read My Story ↗</span>
+      </a>
 
-          <div class="document-card">
-            <h3>Resume</h3>
-            <p>
-              My education, professional experiences,
-              accomplishments, and skills.
-            </p>
-            <small>PDF COMING SOON</small>
-          </div>
+      <a class="document-card"
+         href="documents/research-proposal.pdf"
+         target="_blank" rel="noopener noreferrer">
+        <span class="document-icon">✧</span>
+        <h3>Research Proposal</h3>
+        <p>
+          A collaborative research proposal exploring
+          bipolar disorder and reproductive healthcare.
+        </p>
+        <span class="document-link">View Research ↗</span>
+      </a>
 
-          <div class="document-card">
-            <h3>Personal Statement</h3>
-            <p>
-              My personal experiences, motivations,
-              and professional aspirations.
-            </p>
-            <small>PDF COMING SOON</small>
-          </div>
+      <a class="document-card"
+         href="documents/accomplishments.pdf"
+         target="_blank" rel="noopener noreferrer">
+        <span class="document-icon">★</span>
+        <h3>Accomplishments</h3>
+        <p>
+          My academic honors, certifications,
+          scholarships, and community involvement.
+        </p>
+        <span class="document-link">View Accomplishments ↗</span>
+      </a>
 
-          <div class="document-card">
-            <h3>LinkedIn</h3>
-            <p>
-              My professional profile, experiences,
-              and connections.
-            </p>
-            <small>PROFILE LINK COMING SOON</small>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+</section>
 
   </main>
 
